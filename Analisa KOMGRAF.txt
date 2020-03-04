@@ -1,0 +1,123 @@
+---------------------------------------------------------------------------------------DDA
+
+//hitung perubahan nilai x (x_inc) dan y (y_inc)
+	x_inc = dx / steps;
+	y_inc = dy / steps;
+
+Jika diubah *, maka gambar hilang. Hanya menyisakan titik awal (1,1)
+
+//perulangan untuk menggambar titik-titik
+do {
+		x += x_inc; // x = x + x_inc
+		y += y_inc; // y = y + y_inc
+		glVertex2i(round(x), round(y)); //gambar titik
+	} while (x < x2);
+
+jika diubah while (x > x2), gambar menghilang. hanya menyisakan titik awal (1,1)
+
+//hitung steps
+	if (dx > dy) {
+		steps = dx;
+	}
+	else steps = dy;
+
+Jika dirubah menjadi (dx < dy) tidak berefek;
+
+pk adalah parameter keputusan, untuk menentukan y selanjutnya
+
+//perulangan untuk menggambar titik-titik 
+do {
+		x += x_inc; // x = x + x_inc
+		y += y_inc; // y = y + y_inc
+		glVertex2i(round(x), round(y)); //gambar titik
+	} while (x < x2);
+
+Jika dirubah,
+x -= x_inc;
+y -= y_inc;
+windows white screen;
+
+//hitung dx dan dy
+dx = x2 - x1;
+dy = y2 - y1;
+
+Jika dirubah menjadi +, tidak berubah apa"
+
+//hitung perubahan nilai x (x_inc) dan y (y_inc)
+	x_inc = dx / steps;
+	y_inc = dy / steps;
+
+Jika ,
+x_inc = dx;
+y_inc = dy;
+Hanya membuat titik terakhir saja
+
+x = x1;
+y = y1;
+Jika dirubah,
+x = x2;
+y = y2;
+titik berubah ke diatas;
+
+void dda(void) {
+	int x1, y1, x2, y2;
+	float x,y,dx, dy, steps, x_inc, y_inc;
+	//tentukan titik awal dan akhir
+	x1 = 1;
+	y1 = 1;
+	x2 = 500;
+	y2 = 400;
+	x = x2;
+	y = y2;
+
+	//hitung dx dan dy
+	dx = x2 - x1;
+	dy = y2 - y1;
+
+	//hitung steps
+	if (dx > dy) {
+		steps = dx;
+	}
+	else steps = dy;
+
+	//hitung perubahan nilai x (x_inc) dan y (y_inc)
+	x_inc = dx / steps;
+	y_inc = dy / steps;
+
+	//gambar titik awal
+	glBegin(GL_POINTS);
+	glVertex2i(x, y); // gambar titik awal
+
+	//perulangan untuk menggambar titik-titik 
+	do {
+		x -= x_inc; // x = x + x_inc
+		y -= y_inc; // y = y + y_inc
+		glVertex2i((x), (y)); //gambar titik
+	} while (x > x1);
+
+	glEnd();
+	glFlush();
+}
+
+Membuat titik dari atas ke bawah
+
+//tentukan titik awal dan akhir
+	x1 = 1;
+	y1 = 1;
+	x2 = 2;
+	y2 = 400;
+	x = x1;
+	y = y1;
+
+Jika seperti ini, membuat Garis yang terbentuk sesuai sumbu y, yaitu vertical
+
+//tentukan titik awal dan akhir
+	x1 = 1;
+	y1 = 1;
+	x2 = 500;
+	y2 = 2;
+	x = x1;
+	y = y1;
+
+Jika seperti ini, membuat Garis yang terbentuk sesuai sumbu x, yaitu horizontal
+---------------------------------------------------------------------------------------Bresenham

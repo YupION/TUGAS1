@@ -1,0 +1,28 @@
+Kompresi Citra
+
+Lossy compression
+Lossless Compression
+
+Lossy Compression = File citra lebih kecil, warna jadi sederhana
+Contoh : JPEG, MPEG
+
+teknik nya : color reduction(penguranagn color depth),chroma subsampling, transformasi fourie, wavelet, DCT
+Chroma Subsampling -> YUV, YCrCb;
+
+Lossless Compression = kompres sesuai citra original, rasio compression rendah 
+
+teknik nya : RLE, Huffman, LZW, DCT
+
+Pengukuran Kinerja Kompresi Citra -> untuk membandingkan, hasil kompresi dan original citra;
+MSE, PSNR,
+
+teknik kompresi gif
+teknik kompresi png
+teknik kompresi jpeg
+teknik kompresi jpeg 2000
+
+DWT -> LL, HL, LH, HH
+pembagian bit bit
+
+
+kompesi citra dengan DCT -> pemadatan
